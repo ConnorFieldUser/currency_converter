@@ -10,36 +10,29 @@ class Money:
         self.symbol = symbol
 
     def convert_to_usd(self):
-            # print("usd_version:")
             return self.value / currencies[self.symbol]
-            # return currencies(self.value) / Money(self.value)
 
     def __add__(self, other):
         print("added")
-        added = self.convert_to_usd() + other.convert_to_usd()
-        return added
-        # return Money("usd", (self.value + other.value))
-        # return Money('usd', self.value + other.value)
+        return self.convert_to_usd() + other.convert_to_usd()
 
     def __sub__(self, other):
         print("subtracted")
-        subtracted = self.convert_to_usd() + other.convert_to_usd()
-        return subtracted
+        return self.convert_to_usd() + other.convert_to_usd()
 
     def __mul__(self, other):
         print("multiplied")
-        multiplied = self.convert_to_usd() * other.convert_to_usd()
-        return multiplied
+        return self.convert_to_usd() * other.convert_to_usd()
 
     def __eq__(self, other):
         print("is equal:")
-        is_equal = self.convert_to_usd() == other.convert_to_usd()
-        return is_equal
+        # is_equal = self.convert_to_usd() == other.convert_to_usd()
+        # return is_equal
+        return self.convert_to_usd() == other.convert_to_usd()
 
     def __ne__(self, other):
         print("is not equal:")
-        is_not_equal = self.convert_to_usd() != other.convert_to_usd()
-        return is_not_equal
+        return self.convert_to_usd() != other.convert_to_usd()
 
     def __lt__(self, other):
         print("is less than:")
@@ -48,18 +41,15 @@ class Money:
 
     def __gt__(self, other):
         print("is greater than:")
-        greater_than = self.convert_to_usd() > other.convert_to_usd()
-        return greater_than
+        return self.convert_to_usd() > other.convert_to_usd()
 
     def __le__(self, other):
         print("is less than or equal to:")
-        less_than = self.convert_to_usd() <= other.convert_to_usd()
-        return less_than
+        return self.convert_to_usd() <= other.convert_to_usd()
 
     def __ge__(self, other):
         print("is greater than or equal to:")
-        greater_than = self.convert_to_usd() >= other.convert_to_usd()
-        return greater_than
+        return self.convert_to_usd() >= other.convert_to_usd()
 
     def __str__(self):
         return "converted value: " + "NOOOOOOO"
