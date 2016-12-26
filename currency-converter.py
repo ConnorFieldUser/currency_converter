@@ -52,7 +52,7 @@ class Money:
         return self.convert_to_usd() >= other.convert_to_usd()
 
     def __str__(self):
-        return "converted value: " + "NOOOOOOO"
+        return "converted value: "
 
 # ge,>= gt,> le,<= lt,< add+ sub- eq,== ne,!= mul*
 
